@@ -11,3 +11,9 @@ reasonable build with reasonable dependency management:
 * How to setup the build: `cmake -S . -B build [-G Ninja]`
 * How to build the binary: `cmake --build build`
 * How to run the built binary: run `build/main`
+
+The top-level `Makefile` defines a number of phony targets that act as shortcuts for specific cmake invocations:
+* `bootstrap` sets up `vcpkg`.
+* `configure/reconfigure` prepare cmake build.
+* `build/run` to compile and run the binary.
+* `clean`.
